@@ -1,0 +1,9 @@
+build:
+    composer:
+        image: composer/composer:1.1
+        commands:
+            - composer install
+    test:
+        image: php:7
+        commands:
+            - ./vendor/bin/phpunit -v --debug
